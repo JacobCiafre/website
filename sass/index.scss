@@ -1,0 +1,314 @@
+* {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.noShow {
+    display: none;
+}
+
+.invert {
+    transform: rotate(180deg);
+    z-index: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #4f565a;
+
+    .content_body {
+        margin: 1rem;
+        padding: 1rem;
+        background-image: url("../imgs/high-quality-paper.jpg");
+        font-size: x-large;
+
+        h1 {
+            text-align: center;
+            letter-spacing: 0.15rem;
+        }
+
+        .text-transition {
+            animation: fadeIn ease 3s;
+            -webkit-animation: fadeIn ease 3s;
+            -moz-animation: fadeIn ease 3s;
+            -o-animation: fadeIn ease 3s;
+            -ms-animation: fadeIn ease 3s;
+        }
+
+
+        &>.home__hobbies-header {
+
+            .bikepacking-picture {
+                position: relative;
+                width: 100%;
+                border: 3px solid;
+                border-radius: 10%;
+            }
+        }
+
+
+        &>.home__programming-header {
+
+            .tech-icon-title {
+                text-align: center;
+
+                :not(last-child) {
+                    margin-right: 2rem;
+                }
+
+                .tech-icon {
+                    width: 5rem;
+                }
+
+            }
+
+        }
+
+        &>.home__research-header {
+
+            .paper-teaser {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+
+                .paper-links {
+
+                    width: 100%;
+
+                    ul {
+                        list-style: square inside;
+                        padding-left: 0;
+
+                        * {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+
+                p {
+                    text-align: right;
+                    width: 100%;
+                    margin-right: 2rem;
+                }
+
+            }
+        }
+
+        &>.home__statement-header {
+
+
+            &>.about-me {
+
+                @media only screen and (min-width: 1150px) {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                }
+
+                p {
+                    margin-right: 2rem;
+                    margin-left: 2rem;
+                }
+
+                .circles {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    .social-links {
+                        display: flex;
+                        flex-direction: row;
+                        text-align: center;
+
+                        p {
+                            display: flex;
+                            flex-direction: column;
+
+                            .social-icon {
+                                width: 3rem;
+                            }
+
+                        }
+
+                    }
+
+                    .profile-picture {
+                        max-height: 20rem;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border: 1px solid;
+                        border-radius: 100%;
+                    }
+
+
+                }
+
+
+
+            }
+
+        }
+
+
+        .arrow {
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+        }
+
+        &>.home__academics-header {
+
+
+            .home__undergrad-headers {
+
+                @media only screen and (min-width: 1150px) {
+                    display: flex;
+                    flex-direction: row;
+
+                }
+
+                .university-column {
+                    margin-right: 5rem;
+                }
+
+                .filter-column {
+                    margin-left: auto;
+                    align-self: center;
+
+
+                    .filters:not(.noShow) {
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                        border: 1px solid black;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        width: max-content;
+                        background-color: #9ca9b3;
+                        // color: white;
+
+                        .filter-box-header,
+                        h4 {
+                            margin-top: 0.25rem;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .filter-box-elements-container {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .filter-box-element:not(:last-child) {
+                                margin-right: 1rem;
+                                margin-bottom: 0.25rem;
+
+                            }
+
+                        }
+
+                    }
+                }
+
+
+            }
+
+            .home__academics-body:not(.noShow) {
+
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+                flex-wrap: wrap;
+
+                &>.course-list-element {
+                    flex: 1;
+                    flex-basis: 50%;
+                    margin-top: 0.5rem;
+                    text-align: center;
+
+                }
+
+                &>.course-list-element:last-child {
+                    max-width: 50%;
+
+                }
+
+            }
+        }
+    }
+
+
+}
+
+
+
+// FadIn ////////////////////////////////////////////////
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

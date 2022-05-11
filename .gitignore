@@ -1,0 +1,7 @@
+.vscode
+.env
+static/css/
+personal-site.db
+dbgenerator.py
+__pycache__
+website.zip
