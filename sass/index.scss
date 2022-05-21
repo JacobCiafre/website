@@ -18,7 +18,7 @@
 
 body {
     margin: 0;
-    background-color: #4f565a;
+    background-color: #8da5b2;
 
     .content_body {
         margin: 1rem;
@@ -72,9 +72,17 @@ body {
 
             .paper-teaser {
 
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                @media only screen and (min-width: 1150px) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    p {
+                        text-align: right;
+                        width: 100%;
+                        margin-right: 2rem;
+                    }
+                }
 
 
                 .paper-links {
@@ -91,11 +99,7 @@ body {
                     }
                 }
 
-                p {
-                    text-align: right;
-                    width: 100%;
-                    margin-right: 2rem;
-                }
+
 
             }
         }
@@ -135,7 +139,7 @@ body {
                             flex-direction: column;
 
                             .social-icon {
-                                width: 3rem;
+                                width: 5rem;
                             }
 
                         }
